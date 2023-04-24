@@ -77,6 +77,13 @@ Sidebar heading:  20px 'Manrope', sans-serif
     21. Others
 
 */
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Baloo+Da+2:wght@500&family=Dancing+Script&family=Indie+Flower&family=Righteous&family=Roboto:wght@100&family=Satisfy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Dancing+Script&family=Indie+Flower&family=Satisfy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&family=Satisfy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap');
 
@@ -4002,7 +4009,7 @@ ul.counter-list li:nth-child(2) {
 
 .services-style-one {
 	width: 250px;
-	height: 450px;
+	height: 510px;
 	padding: 10px;
 	background: var(--white);
 	position: relative;
@@ -6749,7 +6756,11 @@ footer {
 	width: 500%;
 	background: #FD7D07;
 	z-index: -1;
-	border-radius: 0 30px 0 0;
+	/* border-radius: 0 30px 0 0; */
+}
+.footer-bottom{
+	width: 1565px;
+
 }
 
 /* ============================================================== 
@@ -7822,20 +7833,20 @@ footer {
 }
 
 .img {
-	width: 400px;
-	height: 400px;
+	width: 380px;
+	height: 380px;
 }
 
 .swiper-slide-gallery {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
+	/* height: 100%; */
 }
 
 .swiper-slide-gallery img {
 	max-width: 380px;
-	height: auto;
+	/* height: auto; */
 }
 
 @media screen and (min-width: 768px) {
@@ -7915,6 +7926,24 @@ footer {
     -o-transform:scale(1.1); /* Opera */
      transform:scale(1.1);
 }
+
+.container-about{
+	background-image: url("assets/img/tomate.png")	;
+}
+
+body::-webkit-scrollbar {
+	width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+	background: white;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+	background-color: #FD7D07;    /* color of the scroll thumb */
+	       /* roundness of the scroll thumb */
+	border: 3px solid #FD7D07;  /* creates padding around scroll thumb */
+  }
 
 /* .products {
 	position: relative;
