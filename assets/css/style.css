@@ -4090,13 +4090,18 @@ ul.counter-list li:nth-child(2) {
 	-webkit-text-fill-color: transparent;
 }
 
-/* .services-style-one a:hover {
+.services-style-one a:hover {
 	color: var(--color-primary);
-} */
+}
 
 .services-style-one img {
 	height: 50%;
 	width: 120%;
+}
+
+.services-style-one-2 img {
+	height: 60%;
+	width: 60%;
 }
 
 .services-style-one .thumb {
