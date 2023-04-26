@@ -316,6 +316,7 @@ h6 {
 	letter-spacing: 0;
 	margin: 0;
 	margin-bottom: 15px;
+	font-family: 'Baloo Da 2', cursive;
 }
 
 h1 {
@@ -6758,7 +6759,8 @@ footer {
 	z-index: -1;
 	/* border-radius: 0 30px 0 0; */
 }
-.footer-bottom{
+
+.footer-bottom {
 	width: 1565px;
 
 }
@@ -7833,15 +7835,15 @@ footer {
 }
 
 .img {
-	width: 380px;
-	height: 380px;
+	width: 370px;
+	height: 370px;
 }
 
 .swiper-slide-gallery {
-	display: flex;
+	display: grid;
 	justify-content: center;
 	align-items: center;
-	/* height: 100%; */
+	height: 100%;
 }
 
 .swiper-slide-gallery img {
@@ -7862,6 +7864,8 @@ footer {
 		height: auto;
 	}
 }
+
+
 
 
 .button-port {
@@ -7895,9 +7899,12 @@ footer {
 	text-align: center;
 }
 
-		 .paragraph  {
-			font-weight: bolder;
-			color: #000000;		}
+
+
+.paragraph {
+	font-weight: bolder;
+	color: #000000;
+}
 
 
 .produto h3 {
@@ -7912,38 +7919,53 @@ footer {
 }
 
 .img {
-    -webkit-transition: all 0.5s ease; /* Safari and Chrome */
-    -moz-transition: all 0.5s  ease; /* Firefox */
-    -ms-transition: all 0.5s  ease; /* IE 9 */
-    -o-transition: all 0.5s  ease; /* Opera */
-    transition: all 0.5s  ease;
+	-webkit-transition: all 0.5s ease;
+	/* Safari and Chrome */
+	-moz-transition: all 0.5s ease;
+	/* Firefox */
+	-ms-transition: all 0.5s ease;
+	/* IE 9 */
+	-o-transition: all 0.5s ease;
+	/*Opera */
+	transition: all 0.5s ease;
 }
 
 .img:hover {
-    -webkit-transform:scale(1.1); /* Safari and Chrome */
-    -moz-transform:scale(1.1); /* Firefox */
-    -ms-transform:scale(1.1); /* IE 9 */
-    -o-transform:scale(1.1); /* Opera */
-     transform:scale(1.1);
+	-webkit-transform: scale(1.1);
+	/* Safari and Chrome */
+	-moz-transform: scale(1.1);
+	/* Firefox */
+	-ms-transform: scale(1.1);
+	/* IE 9 */
+	-o-transform: scale(1.1);
+	/* Opera */
+	transform: scale(1.1);
 }
 
-.container-about{
-	background-image: url("assets/img/tomate.png")	;
+.container-about {
+	background-image: url("assets/img/tomate.png");
 }
+
+
+/* edit scrollbar */
 
 body::-webkit-scrollbar {
-	width: 12px;               /* width of the entire scrollbar */
-  }
-  
-  body::-webkit-scrollbar-track {
-	background: white;        /* color of the tracking area */
-  }
-  
-  body::-webkit-scrollbar-thumb {
-	background-color: #FD7D07;    /* color of the scroll thumb */
-	       /* roundness of the scroll thumb */
-	border: 3px solid #FD7D07;  /* creates padding around scroll thumb */
-  }
+	width: 12px;
+	/* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+	background: white;
+	/* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #FD7D07;
+	/* color of the scroll thumb */
+	/* roundness of the scroll thumb */
+	border: 3px solid #FD7D07;
+	/* creates padding around scroll thumb */
+}
 
 /* .products {
 	position: relative;
