@@ -3276,6 +3276,8 @@ nav.navbar.validnavs.inc-shape::after {
 	opacity: 1;
 }
 
+
+
 .banner-area:hover .swiper-button-prev {
 	left: 30px;
 	right: auto;
@@ -3292,7 +3294,48 @@ nav.navbar.validnavs.inc-shape::after {
 	-webkit-transition: all 0.35s ease-in-out;
 	transition: all 0.35s ease-in-out;
 	opacity: 0;
+	
 }
+
+/* ------ */
+
+.services-style-one-carousel-2:hover .swiper-button-prev,
+.services-style-one-carousel-2:hover .swiper-button-next {
+	opacity: 2;
+	color: rgba(255, 255, 255, 0.089); ;
+}
+
+
+
+.services-style-one-carousel-2:hover .swiper-button-prev {
+	left: 30px;
+	right: auto;
+}
+
+.services-style-one-carousel-2:hover .swiper-button-next {
+	right: 30px;
+	left: auto;
+}
+
+.services-style-one-carousel-2 .swiper-button-prev,
+.services-style-one-carousel-2 .swiper-button-next {
+	height: auto;
+	-webkit-transition: all 0.35s ease-in-out;
+	transition: all 0.35s ease-in-out;
+	opacity: 0;
+}
+
+.services-style-one-carousel-2.navigation-circle .swiper-button-prev,
+.services-style-one-carousel-2.navigation-circle .swiper-button-next {
+	height: 60px;
+	width: 60px;
+	line-height: 60px;
+	border-radius: 50%;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ------ */
+
 
 .banner-area .swiper-button-prev::after,
 .banner-area .swiper-button-next::after {
