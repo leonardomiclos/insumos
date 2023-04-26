@@ -3302,7 +3302,7 @@ nav.navbar.validnavs.inc-shape::after {
 .services-style-one-carousel-2:hover .swiper-button-prev,
 .services-style-one-carousel-2:hover .swiper-button-next {
 	opacity: 2;
-	color: rgba(255, 255, 255, 0.089); ;
+	color: rgba(70, 68, 68, 0.089); ;
 }
 
 
@@ -3331,7 +3331,7 @@ nav.navbar.validnavs.inc-shape::after {
 	width: 60px;
 	line-height: 60px;
 	border-radius: 50%;
-	border: 2px solid rgba(255, 255, 255, 0.3);
+	border: 2px solid rgba(255, 255, 255, 0);
 }
 
 /* ------ */
