@@ -278,6 +278,40 @@
 			},
 		});
 
+				/* ==================================================
+			# product Carousel
+		 ===============================================*/
+		 const ProductsStyleOne = new Swiper(".services-style-one-carousel-2", {
+			// Optional parameters
+			loop: true,
+			slidesPerView: 1,
+			spaceBetween: 40,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			// Navigation arrows
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev"
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1199: {
+					slidesPerView: 6,
+				}
+			},
+		});
+
 
 		/* ==================================================
 			# Testimonials Carousel
@@ -521,7 +555,7 @@
 		/* ==================================================
 	# Images Gallery Carousel
  ===============================================*/
-		const imagesGallery = new Swiper(".swiper-container", {
+		const imagesGallery = new Swiper(".container", {
 			// Optional parameters
 			slidesPerView: 'auto',
 			centeredSlides: true,
@@ -633,6 +667,27 @@
 		});
 	});
 
+	const relatedProduct = new Swiper(".related-product-carousel", {
+		// Optional parameters
+		loop: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		autoplay: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+		},
+	});
+
+
+	  
 	
 
 

@@ -4017,6 +4017,20 @@ ul.counter-list li:nth-child(2) {
 	z-index: 1;
 }
 
+.services-style-one-2 {
+	width: 180px;
+	height: 180px;
+	padding: 10px;
+	background: var(--white);
+	position: relative;
+	z-index: 1;
+}
+
+.services-style-one-2 img {
+	height: 50%;
+	width: 50%;
+}
+
 .services-style-one p {
 	margin: 0;
 }
@@ -7966,6 +7980,25 @@ body::-webkit-scrollbar-thumb {
 	border: 3px solid #FD7D07;
 	/* creates padding around scroll thumb */
 }
+
+.partners-carousel {
+	display: flex;
+	justify-content: center;
+  }
+  
+  .slick-slide img {
+	margin: 0 auto;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+	color: #000;
+  }
+  
+  .slick-dots li button:before {
+	color: #000;
+  }
+  
 
 /* .products {
 	position: relative;
