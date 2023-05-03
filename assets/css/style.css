@@ -1,9 +1,5 @@
 /* ----------------------------------
 
-Template Name: Agrul - Organic Farm Agriculture Template
-Author: validtheme
-Description:
-Version: 1.0
 
 Main Font    : Manrope
 Main Color   : #6222cc
@@ -2624,10 +2620,10 @@ p {
 }
 
 .top-bar-area .social {
-	display: inline-block;
-	width: 345px;
-	padding: 15px 30px;
-	margin-left: 280px;
+	/* display: inline-block; */
+	width: 400px;
+	padding: 10px 65px;
+	/* margin-left: 280px; */
 	background: #1a4133;
 }
 
@@ -4648,7 +4644,7 @@ ul.counter-list li:nth-child(2) {
 =================================================================== */
 
 .mask-text {
-	-webkit-background-clip: text;
+	/* -webkit-background-clip: text; */
 	-webkit-text-fill-color: transparent;
 	background-size: cover;
 	background-position: center;
@@ -4951,7 +4947,7 @@ ul.counter-list li:nth-child(2) {
 
 .farmer-style-one-item .info {
 	display: inline-block;
-	float: right;
+	/* float: right; */
 	margin-top: 24px;
 }
 
@@ -6794,7 +6790,14 @@ footer {
 }
 
 .footer-bottom {
-	padding: 20px 0;
+	display: flex;
+	flex-direction: column;
+  }
+  
+
+.footer-bottom {
+	/* padding: 20px 0; */
+	height: 144px;
 	background: var(--dark);
 	position: relative;
 	z-index: 1;
@@ -6823,7 +6826,7 @@ footer {
 }
 
 .footer-bottom {
-	width: 1565px;
+	width: 1910px;
 
 }
 
@@ -7180,7 +7183,7 @@ footer {
 		border-radius: inherit;
 		display: inline-block;
 		width: 48%;
-		float: left;
+		/* float: left; */
 		margin: 0;
 		margin-right: 4%;
 	}
@@ -7932,7 +7935,7 @@ footer {
 
 .button-port {
 	margin-top: 120px;
-	margin-left: 475px;
+	margin-left: 35%;
 	width: 400px;
 	padding-left: 65px;
 	border: solid 1px;
@@ -8012,6 +8015,7 @@ footer {
 /* edit scrollbar */
 
 body::-webkit-scrollbar {
+	height: 100px;
 	width: 12px;
 	/* width of the entire scrollbar */
 }
@@ -8046,6 +8050,94 @@ body::-webkit-scrollbar-thumb {
   .slick-dots li button:before {
 	color: #000;
   }
+
+  /* .main-nav-content{
+	padding-left: 655px;
+  } */
+
+  .owl-theme .owl-nav.disabled + .owl-dots {
+	margin-top: 15px;
+	display: inline-block;
+  }
+  
+  .owl-theme .owl-dots .owl-dot span {
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	border-radius: 50%;
+	background: rgba(200, 200, 200, 0.4);
+  }
+  
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+	background: #823DCC;
+  }
+
+  .slider-fade {
+	position: relative;
+  }
+  .slider-fade .owl-item {
+	height: 100vh;
+	position: relative;
+  }
+  .slider-fade .item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+  }
+  .slider-fade .item .caption {
+	z-index: 9;
+  }
+  .slider-fade .owl-theme .owl-dots {
+	position: absolute;
+	bottom: 5vh;
+	width: 100%;
+  }
+
+
+
+  .grid-container {
+	margin-left: 26%;
+	width: 284px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	border-bottom: thin solid #cccccc;
+	padding-bottom: 20px;
+  }
+  
+  .grid-item {
+	width: 284px;
+	height: 284px;
+	padding-bottom: 100%;
+	position: relative;
+	overflow: hidden;
+  }
+  
+  .grid-item img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 284px;
+	height: 284px;
+	object-fit: cover;
+	border: thin solid var(--color-heading)
+  }
+
+  ul, ol {
+	list-style: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
   
 
 /* .products {

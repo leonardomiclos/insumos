@@ -278,10 +278,10 @@
 			},
 		});
 
-				/* ==================================================
-			# product Carousel
-		 ===============================================*/
-		 const ProductsStyleOne = new Swiper(".services-style-one-carousel-2", {
+		/* ==================================================
+	# product Carousel
+ ===============================================*/
+		const ProductsStyleOne = new Swiper(".services-style-one-carousel-2", {
 			// Optional parameters
 			loop: true,
 			slidesPerView: 1,
@@ -686,12 +686,57 @@
 		},
 	});
 
+	function rolarParaDiv() {
+		console.log("Teste")
+		$('html, body').animate({
+			scrollTop: $('#contact').offset().top
+		}, 1000);
+	}
 
-	  
-	
+	$('#meuBotao').click(function () {
+		rolarParaDiv();
+	});
+
+	$(document).ready(function () {
+		$('#meuBotao').click(function () {
+			alert('O botão foi clicado!');
+		});
+	});
+
+
+
+	$(function () {
+
+
+
+		"use strict";
+
+		var wind = $(window);
 
 
 
 
+		/* ----------------------------------------------------------------
+						[ Navbar ( scrollIt ) ]
+		-----------------------------------------------------------------*/
+
+		$.scrollIt({
+			upKey: 38,                // key code to navigate to the next section
+			downKey: 40,              // key code to navigate to the previous section
+			easing: 'swing',          // the easing function for animation
+			scrollTime: 600,          // how long (in ms) the animation takes
+			activeClass: 'active',    // class given to the active nav element
+			onPageChange: null,       // function(pageIndex) that is called when page is changed
+			topOffset: -70            // offste (in px) for fixed top navigation
+		});
+	});
 
 })(jQuery); // End jQuery
+
+function scrollToDiv() {
+	var div = document.getElementById("contact");
+	div.scrollIntoView({ behavior: "smooth" });
+}
+
+
+

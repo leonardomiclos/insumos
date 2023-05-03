@@ -48,9 +48,6 @@
             <div class="row align-center">
                 <div class="col-lg-9">
                     <div class="flex-item left">
-
-                        <p>
-                        </p>
                         <ul class="info">
                             <li>
                                 <a class="fas fa-map-marker-alt"
@@ -104,7 +101,7 @@
     ============================================= -->
     <header>
         <!-- Start Navigation -->
-        <nav class="navbar mobile-sidenav inc-shape navbar-common navbar-sticky navbar-default validnavs">
+        <nav class="navbar mobile-sidenav validnavs">
             <div class="container d-flex justify-content-between align-items-center">
 
 
@@ -120,16 +117,16 @@
                 <!-- End Header Navigation -->
 
                 <!-- Main Nav -->
-                <div class="main-nav-content" style="padding-left: 685px;">
+                <div class="main-nav-content">
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="navbar-menu">
 
-                        <img src="assets/img/logo.png" alt="Logo">
+                        <img src="assets/img/Logo Insumos Holambra Vetor.svg" alt="Logo">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                             <i class="fa fa-times"></i>
                         </button>
 
-                        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <ul class="nav " data-in="fadeInDown" data-out="fadeOutUp">
                             <li class="dropdown">
                                 <a href="index.html" class="" data-toggle="dropdown">Home</a>
 
@@ -143,12 +140,16 @@
 
                             </li>
 
+                            <li class="dropdown">
+                                <a onclick="scrollToDiv()" class="" data-toggle="dropdown">Contato</a>
+                                <!-- <a id="contact" name="contact" data-scroll-nav="1" class=""  data-toggle="dropdown">Fale Conosco</a> -->
+                            </li>
+
+
+
 
                         </ul>
                     </div><!-- /.navbar-collapse -->
-
-
-
                     <!-- Overlay screen for menu -->
                     <div class="overlay-screen"></div>
                     <!-- End Overlay screen for menu -->
@@ -165,7 +166,7 @@
     <!-- Start Banner Area 
     ============================================= -->
     <div class="banner-area navigation-circle text-light banner-style-one zoom-effect overflow-hidden"
-        style=" height: 65%;">
+        style=" height: 85%;">
         <!-- Slider main container -->
         <div class="banner-fade">
             <!-- Additional required wrapper -->
@@ -173,7 +174,8 @@
 
                 <!-- Single Item -->
                 <div class="swiper-slide banner-style-one">
-                    <div class="banner-thumb bg-cover shadow dark" style="background: url(assets/img/Insumos.jpg);">
+                    <div class="banner-thumb bg-cover shadow dark"
+                        style="background: url(assets/img/Insumos.jpg); background-color: gray;">
                     </div>
                     <div class="container">
                         <div class="row align-center">
@@ -280,7 +282,7 @@
             <div class="row align-center">
                 <div class="col-xl-5 col-lg-6 about-style-one pr-50 pr-md-15 pr-xs-15">
                     <div class="thumb">
-                        <img src="assets/img/tomate.png" alt="Image Not Found">
+                        <img src="assets/img/banner/26.jpg" alt="Image Not Found">
                         <div class="sub-item">
                             <img src="assets/img/about/1.jpg" alt="Image Not Found">
                         </div>
@@ -340,7 +342,8 @@
         </div> -->
         <!-- End Shape -->
 
-        <div class="embed-container wow fadeInUp" data-wow-delay="500ms" style="border-top: solid 1px gainsboro; border-bottom: solid 1px gainsboro; background: url(assets/img/shape/23.png);">
+        <div class="embed-container wow fadeInUp" data-wow-delay="500ms"
+            style="border-top: solid 1px gainsboro; border-bottom: solid 1px gainsboro; background: url(assets/img/shape/23.png);">
             <div class="row align-center">
                 <div>
                     <div>
@@ -361,7 +364,7 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
         <!-- End About -->
 
 
@@ -481,7 +484,8 @@
                         </div>
 
                     </div>
-                    <a class="button-port" href="products.html">ACESSE NOSSO PORTFÓLIO COMPLETO</a>
+                    <a class="button-port" href="products.html" style="display: flex;">ACESSE NOSSO PORTFÓLIO
+                        COMPLETO</a>
 
                 </div>
             </div>
@@ -745,67 +749,19 @@
     <!-- Start Contact Us 
     ============================================= -->
     <div class="contact-area bg-gray default-padding"
-        style="background-image: url(assets/img/shape/28.png); height: 1100px;">
+        style="background-image: url(assets/img/shape/28.png); height: 1330px;">
 
         <div class="container">
+
             <div class="row align-center">
 
                 <div class="col-tact-stye-one col-lg-7">
 
-                    <!-- <div class="contact-form-style-one mb-md-50">
-                        <h5 class="sub-title">Deseja ser um cooperado?</h5>
-                        <h2 class="heading">Deixe seu contato</h2>
-                        <form id="contact-form" method="post" action="/contato">
-                        <form action="https://validthemes.live/themeforest/agrul/assets/mail/contact.php"
-                                method="POST" class="contact-form contact-form"> 
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <input class="form-control" id="name" name="name" placeholder="Nome" type="text">
-                                    <span class="alert-error"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <input class="form-control" id="email" name="email" placeholder="Email*"
-                                        type="email">
-                                    <span class="alert-error"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <input class="form-control" id="phone" name="phone" placeholder="Telefone"
-                                        type="text">
-                                    <span class="alert-error"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="form-group comments">
-                                    <textarea class="form-control" id="comments" name="comments"
-                                        placeholder=""></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <button type="submit" name="submit" id="submit">
-                                    <i class="fa fa-paper-plane"></i> Enviar
-                                </button>
-                            </div>
-                        </div>
-                         Alert Message 
-                        <div class="col-lg-12 alert-notification">
-                            <div id="message" class="alert-msg"></div>
-                        </div>
-                    </form>
-                    </div>
-                </div> -->
 
-                    <div class="col-tact-stye-one col-lg-9 pl-60 pl-md-15 pl-xs-15">
+
+                    <div class="col-tact-stye-one col-lg-9 pl-60 pl-md-15 pl-xs-15" data-scroll-index="1" name="contact"
+                        id="contact">
+
                         <div class="contact-style-one-info">
                             <h2>
                                 Contato
@@ -818,6 +774,7 @@
                                     </svg>
                                 </span>
                             </h2>
+
                             <p>
                                 Caso haja qualquer dúvida em relação aos nossos produtos ou serviços, não hesite em
                                 entrar
@@ -886,96 +843,128 @@
 
 
                             </ul>
+
                         </div>
                     </div>
 
                 </div>
+
             </div>
 
         </div>
         <!-- End Contact -->
-        <!-- GALERIA -->
-        <div class="gallery wow fadeInUp" data-wow-delay="500ms">
-        
-            <h2 class="heading"
-                style="padding-left: 40%; padding-top: 70px; padding-bottom: 40px; font-family: 'Baloo Da 2', cursive; ">
-                Nos acompanhe nas redes
-            </h2>
-            <div class="swiper-container">
+        <div class="workWithUs" style="display: flex; justify-content: space-around;">
+            <div class="box-work" style="
+                        
+                        border: thin solid black;
+                        height: 200px;
+                        width: 1000px;
+                        margin-top: 40px;
+                        display: flex;
+                        justify-content: flex-end;
+                        flex-direction: column;
+                        align-content: stretch;
+                        align-items: center;
+                        border-radius: 20px;
+                        box-shadow: 5px 10px grey;
+">
 
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide-gallery">
-                        <a href="https://www.instagram.com/p/Cqkt6UjNwhc/" target="_blank"><img class="img"
-                                src="assets/img/instagram6.jpg" alt="Image Not Found"></a>
-                    </div>
-                    <div class="swiper-slide-gallery">
-                        <a href="https://www.instagram.com/p/CqDPu3tOb1c/" target="_blank"><img class="img"
-                                src="assets/img/instagram2.jpg" alt="Image Not Found"></a>
-                    </div>
-                    <div class="swiper-slide-gallery">
-                        <a href="https://www.instagram.com/p/CoM_5rWNduI/
-                    " target="_blank"><img class="img" src="assets/img/instagram3.jpg" alt="Image Not Found"></a>
-                    </div>
-                    <div class="swiper-slide-gallery">
-                        <a href="https://www.instagram.com/p/Cq75jl2urJ2/
-                    " target="_blank"><img class="img" src="assets/img/instagram4.jpg" alt="Image Not Found"></a>
-                    </div>
-                    <div class="swiper-slide-gallery">
-                        <a href="https://www.instagram.com/p/Cor0ftfOzVB/" target="_blank"><img class="img"
-                                src="assets/img/instagram5.jpg" alt="Image Not Found"></a>
-                    </div>
-                    <div class="swiper-slide-gallery">
-                        <a href="https://www.instagram.com/p/Cor0ftfOzVB/" target="_blank"><img class="img"
-                                src="assets/img/instagram5.jpg" alt="Image Not Found"></a>
-                    </div>
-                </div>
-                <!-- <div class="swiper-pagination"></div> -->
+                <h2>Deseja trabalhar conosco?</h2>
+
+                <button formsappId=6452910cd9b86d710a9ed242 onclick="formsappForm.open()"></button>
             </div>
         </div>
 
+
+
+         <!-- GALERIA -->
+        <div class="gallery wow fadeInUp" data-wow-delay="500ms">
+
+            <h2 class="heading" style="display:flex; justify-content: space-around; padding-top: 70px; padding-bottom: 40px; font-family: 'Baloo Da 2', cursive;">
+              Nos acompanhe nas redes
+            </h2>
+          
+            <div class="grid-container">
+              <div class="grid-item">
+                <a href="https://www.instagram.com/p/Cqkt6UjNwhc/" target="_blank">
+                  <img class="img" src="assets/img/instagram6.jpg" alt="Image Not Found">
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="https://www.instagram.com/p/CqDPu3tOb1c/" target="_blank">
+                  <img class="img" src="assets/img/instagram2.jpg" alt="Image Not Found">
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="https://www.instagram.com/p/CoM_5rWNduI/" target="_blank">
+                  <img class="img" src="assets/img/instagram3.jpg" alt="Image Not Found">
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="https://www.instagram.com/p/Cq75jl2urJ2/" target="_blank">
+                  <img class="img" src="assets/img/instagram4.jpg" alt="Image Not Found">
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="https://www.instagram.com/p/Cor0ftfOzVB/" target="_blank">
+                  <img class="img" src="assets/img/instagram5.jpg" alt="Image Not Found">
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="https://www.instagram.com/p/Cqkt6UjNwhc/" target="_blank">
+                  <img class="img" src="assets/img/instagram6.jpg" alt="Image Not Found">
+                </a>
+              </div>
+            </div>
+          
+          </div>
+          
         <!-- GALERIA -->
 
 
         <!-- Start Footer 
     ============================================= -->
         <footer class="bg-white text-light"
-            style="background-image: url(assets/img/shape/brush-down.png); padding-top: 135px; ">
+            style="background-image: url(assets/img/shape/brush-down.png); padding-top: 250px; width: 1911px;">
             <div class="container">
                 <div class="f-items default-padding">
                     <div class="row">
                     </div>
                 </div>
                 <!-- Start Footer Bottom -->
-                <div class="footer-bottom" style="margin-top: 20px;">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <p>&copy; Copyright 2023. Cooperativa Agropecuária de Insumos Holambra. Todos os direitos reservados.</p>
-                            <p class="devby">Desenvolvido por Leonardo Miclos</p>
-                        </div>
-                        <div class="col-lg-6 text-end">
-                            <ul>
-                                <li>
-                                    <a href="about-us.html">Termos</a>
-                                </li>
-                                <li>
-                                    <a href="about-us.html">Privacidade</a>
-                                </li>
-                                <li>
-                                    <a href="contact-us.html">Suporte</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- End Footer Bottom -->
             </div>
-            <!-- <div class="shape-right-bottom">
-            <img src="assets/img/shape/10.png" alt="Image Not Found">
-        </div>-->
+
             <div class="shape-left-bottom">
                 <img src="assets/img/shape/16.png" alt="Image Not Found" style="max-width: 200%; ">
             </div>
         </footer>
+        <div    style=" display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        background-color: #FD7D07;">
+            <div >
+                <div>
+                    <p>&copy; Copyright 2023. Cooperativa Agropecuária de Insumos Holambra. Todos os direitos
+                        reservados.</p>
+                    <p class="devby">Desenvolvido por Leonardo Miclos</p>
+                </div>
+                <div style="display: flex;">
+                    <ul style="display: flex; padding: 10px;">
+                        <li>
+                            <P href="about-us.html">Termos</P>
+
+                        </li>
+                        <li style="margin-left: 50px;">
+                            <P href="about-us.html">Privacidade</P>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <!-- End Footer -->
 
         <!-- jQuery Frameworks
@@ -986,6 +975,7 @@
         <script src="assets/js/jquery.easing.min.js"></script>
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
         <script src="assets/js/modernizr.custom.13711.js"></script>
+        <script src="assets/js/jquery.scrollTo.js"></script>
         <script src="assets/js/swiper-bundle.min.js"></script>
         <script src="assets/js/wow.min.js"></script>
         <script src="assets/js/progress-bar.min.js"></script>
@@ -1000,6 +990,11 @@
         <script src="assets/js/loopcounter.js"></script>
         <script src="assets/js/validnavs.js"></script>
         <script src="assets/js/main.js"></script>
+        <script src="https://forms.app/static/embed.js" type="text/javascript"></script>
+        <script src="https://forms.app/static/embed.js" type="text/javascript"></script>
+        <script> var formsappForm = new formsapp('6452910cd9b86d710a9ed242', 'slider', {"overlay":"rgba(45,45,45,0.6)","button":{"color":"#FD7D07","text":"Clique Aqui!"},"width":"767px","height":"100vh","align":"right"})</script>
+    </script>
+
 
 
 </body>
