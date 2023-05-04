@@ -8100,8 +8100,8 @@ body::-webkit-scrollbar-thumb {
 
 
   .grid-container {
-	margin-left: 26%;
-	width: 284px;
+	margin-left: 22%;
+	width: 350px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 20px;
@@ -8110,8 +8110,8 @@ body::-webkit-scrollbar-thumb {
   }
   
   .grid-item {
-	width: 284px;
-	height: 284px;
+	width: 350px;
+	height: 350px;
 	padding-bottom: 100%;
 	position: relative;
 	overflow: hidden;
@@ -8121,8 +8121,8 @@ body::-webkit-scrollbar-thumb {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 284px;
-	height: 284px;
+	width: 350px;
+	height: 350px;
 	object-fit: cover;
 	border: thin solid var(--color-heading)
   }

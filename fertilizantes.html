@@ -144,7 +144,7 @@
                             </li>
 
                             <li class="dropdown">
-                                <a onclick="scrollToDiv()" href="index.html" class="" data-toggle="dropdown">Contato</a>
+                                <a onclick="scrollToDiv()" href="index.html" class="" style="cursor: pointer;" data-toggle="dropdown">Contato</a>
                                 <!-- <a id="contact" name="contact" data-scroll-nav="1" class=""  data-toggle="dropdown">Fale Conosco</a> -->
                             </li>
 
@@ -219,7 +219,7 @@
         
         <!-- Fim Produtos -->
 
-        <!-- Start Footer 
+         <!-- Start Footer 
     ============================================= -->
     <footer class="bg-white text-light"
     style="background-image: url(assets/img/shape/brush-down.png); padding-top: 250px; width: 1911px;">
@@ -237,27 +237,32 @@
         <img src="assets/img/shape/16.png" alt="Image Not Found" style="max-width: 200%; ">
     </div>
 </footer>
-<div    style=" display: flex;
+<div style=" display: flex;
 flex-direction: column;
 align-content: center;
 align-items: center;
-background-color: #FD7D07;">
-    <div >
+background-color: #FD7D07;
+background-image: url(assets/img/shape/brush-down.png);
+background-repeat: no-repeat;
+">
+
+    <div style="display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-top: 25px;">
         <div>
-            <p>&copy; Copyright 2023. Cooperativa Agropecuária de Insumos Holambra. Todos os direitos
+            <p style="color: white;">&copy; Copyright 2023. Cooperativa Agropecuária de Insumos Holambra. Todos os direitos
                 reservados.</p>
-            <p class="devby">Desenvolvido por Leonardo Miclos</p>
+            <p style="color: white;" class="devby">Desenvolvido por Leonardo Miclos</p>
         </div>
         <div style="display: flex;">
             <ul style="display: flex; padding: 10px;">
-                <li>
-                    <P href="about-us.html">Termos</P>
-
-                </li>
-                <li style="margin-left: 50px;">
-                    <P href="about-us.html">Privacidade</P>
-
-                </li>
+                <ul style="display: flex; padding: 10px;">
+                    <li style="margin-left: 50px;">
+                        <a  href="privacy.html"><P  style="color: white;">Termos e Privacidade</P></a>
+    
+                    </li>
+                </ul>
             </ul>
         </div>
     </div>
