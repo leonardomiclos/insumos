@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body onload="consultarPorLocalizacao()" style="display: flex; flex-direction: row-reverse;">
+    <div style="border: solid 1px black thin; height: auto;border-radius: 10px; display: flex; justify-content: center; font-style: manrope;  ">
+        <div>
+            <div id="div-resultado" class="resultado" style="background-color: none; display: flex;">
+                    <!-- <button id="botao-automatico" onclick="consultarPorLocalizacao()">Obter Previsão do Tempo</button> -->
+            </div>
+        </div>
+        <!-- <div>
+            <h2>Consulta de Tempo - Por Cidade</h2>
+            <input type="text" id="cidade" placeholder="Digite o nome da cidade">
+            <button onclick="consultarPorCidade()">Consultar</button>
+            <div id="resultado-manual"></div>
+        </div> -->
+    </div>
+
+
+
+</body>
+
+<style>
+    .resultado {
+        max-width: 220px;
+        max-height: 150px;
+        float: left;
+        margin-right: 10px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .resultado {
+        display: flex;
+        align-items: center;
+    }
+
+    .resultado .descricao {
+        margin-left: 10px;
+    }
+
+    .resultado img {
+        max-width: 50px;
+        margin-top: 10px;
+    }
+</style>
+
+
+<script src="/assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/pt-br.min.js"></script>
+
+
+
+</html>
