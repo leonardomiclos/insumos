@@ -55,13 +55,12 @@
 
 
 
-    <div class="top-bar-area text-light" style="background-color: #FD7D07; width: 100%;">
+    <div class="top-bar-area text-light">
         <div class="container">
             <div class="row align-center">
                 <div class="col-lg-9">
                     <div class="flex-item left">
-                        <ul class="info-social"
-                            style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; height: 50px;">
+                        <ul class="info-social">
                             <div class="icon-adress">
                                 <li>
                                     <a class="fas fa-map-marker-alt"
@@ -76,8 +75,7 @@
                             <div class="icons-rest">
                                 <li>
                                     <a target="_blank" href="https://loja.insumosholambra.com.br">
-                                        <button
-                                            style="width: 100px; border: none; background: none; color: #ffffff; font-family: Manrope, sans-serif; font-weight: 600;">
+                                        <button class="button-shop">
                                             <i class="fal fa-shopping-cart"
                                                 style="color: #ffffff; padding-right: 10px;"></i>Loja
                                         </button>
@@ -131,7 +129,7 @@
                     <div class="navbar-header">
 
                         <a class="navbar-brand" href="index.html">
-                            <img src="assets\img\Logo Branco.svg" class="logo-logo" alt="Logo">
+                            <img src="assets\img\LogoBranco.svg" class="logo-logo" alt="Logo">
                         </a>
                     </div>
                     <!-- End Header Navigation -->
@@ -145,17 +143,17 @@
 
                             <ul class="nav">
                                 <li class="dropdown">
-                                    <a href="index.html" class="nav-title" style="color: #eef2f5;">Home</a>
+                                    <a href="index.html" class="nav-title">Home</a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="aboutUs.html" class="nav-title" style="color: #eef2f5;">Sobre Nós</a>
+                                    <a href="aboutUs.html" class="nav-title">Sobre Nós</a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="products.html" class="nav-title" style="color: #eef2f5;">Produtos</a>
+                                    <a href="products.html" class="nav-title">Produtos</a>
                                 </li>
                                 <li class="dropdown">
                                     <a onclick="scrollToDiv()" class="nav-title"
-                                        style="cursor: pointer; color: #eef2f5;">Contato</a>
+                                        style="cursor: pointer;">Contato</a>
                                 </li>
                             </ul>
                         </div>
@@ -185,7 +183,7 @@
                 <!-- Single Item -->
                 <div class="swiper-slide banner-style-one">
                     <div class="banner-thumb bg-cover shadow dark"
-                        style="background: url(assets/img/Insumos.jpg); background-color: gray;">
+                        style="background: url(assets/img/banner/Insumos.jpg); background-color: gray;">
                     </div>
                     <div class="container">
                         <div class="row align-center">
@@ -207,7 +205,7 @@
                 <!-- Single Item -->
                 <div class="swiper-slide banner-style-one">
                     <div class="banner-thumb bg-cover shadow dark"
-                        style="background: url(assets/img/womenWith2hands.jpeg);">
+                        style="background: url(assets/img/banner/womenWith2hands.jpeg);">
                     </div>
                     <div class="container">
                         <div class="row align-center">
@@ -224,7 +222,7 @@
                 <!-- End Single Item -->
 
                 <div class="swiper-slide banner-style-one">
-                    <div class="banner-thumb bg-cover shadow dark" style="background: url(assets/img/flowers.jpeg);">
+                    <div class="banner-thumb bg-cover shadow dark" style="background: url(assets/img/banner/flowers.jpeg);">
                     </div>
                     <div class="container">
                         <div class="row align-center">
@@ -243,7 +241,7 @@
 
                 <!-- Single Item -->
                 <div class=" swiper-slide banner-style-one">
-                    <div class="banner-thumb bg-cover shadow dark" style="background: url(assets/img/2hands.jpeg);">
+                    <div class="banner-thumb bg-cover shadow dark" style="background: url(assets/img/banner/2hands.jpeg);">
                     </div>
                     <div class="container">
                         <div class="row align-center">
@@ -285,16 +283,15 @@
             <div class="row align-center">
                 <div class="col-xl-5 col-lg-6 about-style-one pr-50 pr-md-15 pr-xs-15">
                     <div class="thumb">
-                        <img src="assets/img/aérea.webp" alt="Image Not Found">
+                        <img src="assets/img/banner/aérea.webp" alt="Image Not Found">
                         <div class="sub-item">
-                            <img style="width: 75%; margin-top: 75px;
-                                        margin-right: 75px;" src="assets/img/baixados.png" alt="Image Not Found">
+                            <img class="logo-aboutus" src="assets/img/logoSimbolo.png" alt="Image Not Found">
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-7 col-lg-6 about-style-one  wow fadeInUp" data-wow-delay="100ms">
                     <div class="row align-center">
-                        <div class="col-xl-8 col-lg-12" style="padding-left: 115px; padding-bottom: 120px;">
+                        <div class="col-xl-8 col-lg-12" id="about-container">
                             <h2 class="heading" style="font-family: 'Baloo Da 2', cursive;">Sobre Nós</h2>
                             <p>
                                 Conheça a nossa história
@@ -333,8 +330,9 @@
 
         <!-- End Shape -->
 
-        <div class="embed-container wow fadeInUp" data-wow-delay="100ms"
-            style="border-top: solid 1px gainsboro; border-bottom: solid 1px gainsboro; background: url(assets/img/shape/23.png);">
+        <div id="container-video" class="embed-container wow fadeInUp" data-wow-delay="100ms" style="	border-top: solid 1px gainsboro; 
+        border-bottom: solid 1px gainsboro; 
+        background: url(assets/img/shape/23.png);">
             <div class="row align-center">
                 <div>
                     <div>
@@ -401,7 +399,7 @@
                                 <div class="swiper-slide">
                                     <div class="services-style-one">
                                         <div class="thumb">
-                                            <img src="assets\img\284x284Fertil.jpg" alt="Image Not Found">
+                                            <img src="assets\img\produtos\284x284Fertil.jpg" alt="Image Not Found">
                                         </div>
                                         <h5><a href="products.html">Fertilizantes</a></h5>
                                         <p>
@@ -418,7 +416,7 @@
                                 <div class="swiper-slide">
                                     <div class="services-style-one">
                                         <div class="thumb">
-                                            <img src="assets\img\284x284Defensivos.jpg" alt="Image Not Found">
+                                            <img src="assets\img\produtos\284x284Defensivos.jpg" alt="Image Not Found">
                                         </div>
                                         <h5><a href="products.html">Defensivos</a></h5>
                                         <p>
@@ -432,7 +430,7 @@
                                 <div class="swiper-slide">
                                     <div class="services-style-one">
                                         <div class="thumb">
-                                            <img src="assets\img\284x284ProdutosDiv.jpg" alt="Image Not Found">
+                                            <img src="assets\img\produtos\284x284ProdutosDiv.jpg" alt="Image Not Found">
                                         </div>
                                         <h5><a href="products.html">Diversos</a></h5>
                                         <p>
@@ -447,7 +445,7 @@
                                 <div class="swiper-slide">
                                     <div class="services-style-one">
                                         <div class="thumb">
-                                            <img src="assets/img/Telas.jpg" alt="Image Not Found">
+                                            <img src="assets/img/produtos/Telas.jpg" alt="Image Not Found">
                                         </div>
                                         <h5><a href="products.html">Telas</a></h5>
                                         <p>
@@ -463,7 +461,7 @@
                                 <div class="swiper-slide">
                                     <div class="services-style-one">
                                         <div class="thumb">
-                                            <img src="assets\img\284x284Plásticoparaestufa.jpg" alt="Image Not Found">
+                                            <img src="assets\img\produtos\284x284Plásticoparaestufa.jpg" alt="Image Not Found">
                                         </div>
                                         <h5><a href="products.html">Plásticos</a></h5>
                                         <p>
@@ -615,8 +613,10 @@
                                 </div>
                                 <div class="content">
                                     <h5 class="title">Email</h5>
-                                    <a href="mailto:contato@insumosholambra.com.br" style="color: #787878;">contato@insumosholambra.com.br</a>
+                                    <a href="mailto:contato@insumosholambra.com.br?subject=Currículo" title="Clique aqui e anexe seu currículo!" style="color: #787878;" data-toggle="popover" data-content="Anexe seu currículo no email" data-trigger="hover">contato@insumosholambra.com.br</a>
                                 </div>
+                                
+                                
                             </li>
                             <li>
                                 <div class="circle-icon">
@@ -671,8 +671,7 @@
     <!-- GALERIA -->
     <div class="gallery wow fadeInUp" data-wow-delay="100ms">
 
-        <h2 class="heading-instagram"
-            style="padding-top: 70px; margin-top: 100px; padding-bottom: 40px; font-family: 'Baloo Da 2', cursive; font-weight: bold;">
+        <h2 class="heading-instagram">
             Acesse nosso Instagram <a style="margin-left: 10px; color: green;"
                 href="https://www.instagram.com/insumosholambra/">@insumosholambra</a>
         </h2>
@@ -680,33 +679,33 @@
         <div class="grid-container">
             <div class="grid-item2">
                 <a href="https://www.instagram.com/p/CsN23zRtr6_/" target="_blank">
-                    <img class="img" src="assets/img/diaDasMaes.jpg" alt="Image Not Found">
+                    <img class="img" src="assets/img/instagram/diaDasMaes.jpg" alt="Image Not Found">
                 </a>
 
             </div>
             <div class="grid-item2">
                 <a href="https://www.instagram.com/p/CqDPu3tOb1c/" target="_blank">
-                    <img class="img" src="assets/img/instagram2.jpg" alt="Image Not Found">
+                    <img class="img" src="assets/img/instagram/instagram2.jpg" alt="Image Not Found">
                 </a>
             </div>
             <div class="grid-item2">
                 <a href="https://www.instagram.com/p/CoM_5rWNduI/" target="_blank">
-                    <img class="img" src="assets/img/instagram3.jpg" alt="Image Not Found">
+                    <img class="img" src="assets/img/instagram/instagram3.jpg" alt="Image Not Found">
                 </a>
             </div>
             <div class="grid-item2">
                 <a href="https://www.instagram.com/p/Cq75jl2urJ2/" target="_blank">
-                    <img class="img" src="assets/img/instagram4.jpg" alt="Image Not Found">
+                    <img class="img" src="assets/img/instagram/instagram4.jpg" alt="Image Not Found">
                 </a>
             </div>
             <div class="grid-item2">
                 <a href="https://www.instagram.com/p/Cor0ftfOzVB/" target="_blank">
-                    <img class="img" src="assets/img/instagram5.jpg" alt="Image Not Found">
+                    <img class="img" src="assets/img/instagram/instagram5.jpg" alt="Image Not Found">
                 </a>
             </div>
             <div class="grid-item2">
                 <a href="https://www.instagram.com/p/Cqkt6UjNwhc/" target="_blank">
-                    <img class="img" src="assets/img/instagram6.jpg" alt="Image Not Found">
+                    <img class="img" src="assets/img/instagram/instagram6.jpg" alt="Image Not Found">
                 </a>
             </div>
         </div>
@@ -772,6 +771,7 @@
             </div>
             <div class="footer-bottom-bot" style="border-top: 1px solid #FD7D07">
                 <p>&copy; 2023 Cooperativa Agropecuária de Insumos Holambra. Todos os direitos reservados.</p>
+                <a href="privacy.html"><p>Termos e privacidade</p></a>
                 <p>Desenvolvido por Leonardo Miclos</p>
             </div>
         </div>

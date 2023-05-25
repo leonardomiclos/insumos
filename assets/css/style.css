@@ -2639,6 +2639,8 @@ p {
 
 .top-bar-area {
 	overflow: hidden;
+	background-color: #FD7D07;
+	 width: 100%;
 }
 
 .top-bar-area .flex-item i {
@@ -8351,7 +8353,13 @@ ol {
 	}
 }
 
+/* APARTIR DAQUI */
 
+#container-video{
+	border-top: solid 1px gainsboro; 
+	border-bottom: solid 1px gainsboro; 
+	background: url(assets/img/shape/23.png);
+}
 .grid-container {
 	margin-left: 25%;
 	width: 1000px;
@@ -8445,6 +8453,8 @@ ol {
 }
 
 .heading-video2{
+	font-weight: 900;
+	padding-top: 20px;
 	display: flex;
 	justify-content: center;
 }
@@ -8604,8 +8614,39 @@ footer {
 	border-radius: 4px;
 	cursor: pointer;
 }
-  
 
+.info-social{
+	display: flex;
+	flex-direction: row; 
+	justify-content: space-between; 
+	align-items: center; 
+	height: 50px;
+}
+
+
+
+.button-shop{
+	width: 100px; border: none; background: none; color: #ffffff; font-family: Manrope, sans-serif; font-weight: 600;
+}
+
+.nav-title{
+	color: #eef2f5;
+}
+.logo-aboutus{
+	width: 75%; margin-top: 75px; margin-right: 75px;
+}
+
+#about-container{
+	padding-left: 115px; padding-bottom: 120px;
+}
+
+.heading-instagram{
+	padding-top: 70px; 
+	margin-top: 100px; 
+	padding-bottom: 40px; 
+	font-family: 'Baloo Da 2', cursive; 
+	font-weight: bold;
+}
 
 
 @media (max-width: 768px) {
