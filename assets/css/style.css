@@ -1,78 +1,4 @@
-/* ----------------------------------
 
-
-Main Font    : Manrope
-Main Color   : #6222cc
-
--------------------------------------
-
-[Typography]
-
-Body copy:    15px 'Manrope', sans-serif
-Header:     36px 'Manrope', sans-serif
-Input, textarea:  16px 'Manrope', sans-serif
-Sidebar heading:  20px 'Manrope', sans-serif
-
->>> TABLE OF CONTENTS:
-=======================
-        
-    01. Template default css
-        - Animations
-        - General
-        - Section Title
-        - Video Button
-        - Typography
-        - Tables
-        - Forms
-        - Buttons
-        - Pagination
-        - Colors
-    02. Preloader
-    03. Topbar
-	    - Topbar Regular
-        - Topbar With Menu
-    04 Navbar
-        - Navbar Default
-        - Navbar Right Menu
-        - Navbar Sticky
-        - Navbar Center
-    05. Banner
-        - Banner Style One
-        - Banner Style Two
-    06. About Us
-	    - About Style One
-        - About Style Two
-    07. Services
-        - What We Do (Slider)
-        - Services With Image & Icon
-        - Services Single
-    09. Product
-		- Product Light Version
-        - Product Dark Version
-    10. Why Choose Us
-    11. Fun Factor
-    12. Testimonials
-    13. Farmers
-        - Farmer Grid
-        - Farmer Details
-    14. Projects
-        - Project Slider
-        - Prject Grid
-        - Prject Details
-    15. Order Process
-    16. Clients / Brand
-    17. Blog
-        - Standard
-        - Blog Grid
-        - Left Sidebar
-        - Right Sidebar
-        - Single
-    18. Error 404
-    19. Footer
-    20. PHP Contact Form
-    21. Others
-
-*/
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Baloo+Da+2:wght@500&family=Dancing+Script&family=Indie+Flower&family=Righteous&family=Roboto:wght@100&family=Satisfy&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Dancing+Script&family=Indie+Flower&family=Satisfy&display=swap');
@@ -2310,194 +2236,7 @@ p {
 	font-size: 14px;
 }
 
-/* ============================================================== 
-    # Nice Select Styles
-=================================================================== */
-.nice-select {
-	-webkit-tap-highlight-color: transparent;
-	background-color: var(--white);
-	border: solid 1px #e8e8e8;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	clear: both;
-	cursor: pointer;
-	display: block;
-	float: left;
-	font-family: inherit;
-	font-size: 16px;
-	font-weight: normal;
-	height: 50px;
-	line-height: 50px;
-	outline: none;
-	padding-left: 18px;
-	padding-right: 30px;
-	position: relative;
-	text-align: left !important;
-	-webkit-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	white-space: nowrap;
-	width: 100%;
-	margin-bottom: 15px;
-}
 
-.nice-select:hover {
-	border-color: #dbdbdb;
-}
-
-.nice-select:active,
-.nice-select.open,
-.nice-select:focus {
-	border-color: #999999;
-}
-
-.nice-select::after {
-	border-bottom: 2px solid #999999;
-	border-right: 2px solid #999999;
-	content: '';
-	display: block;
-	height: 5px;
-	margin-top: -6px;
-	pointer-events: none;
-	position: absolute;
-	right: 12px;
-	top: 50%;
-	-webkit-transform-origin: 66% 66%;
-	transform-origin: 66% 66%;
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-	-webkit-transition: all 0.15s ease-in-out;
-	transition: all 0.15s ease-in-out;
-	width: 5px;
-}
-
-.nice-select.open .list {
-	opacity: 1;
-	pointer-events: auto;
-	-webkit-transform: scale(1) translateY(0);
-	transform: scale(1) translateY(0);
-	overflow-y: auto !important;
-	height: auto;
-}
-
-.nice-select.open ::after {
-	-webkit-transform: rotate(-135deg);
-	transform: rotate(-135deg);
-}
-
-.nice-select.disabled {
-	border-color: #ededed;
-	color: #999999;
-	pointer-events: none;
-}
-
-.nice-select.disabled::after {
-	border-color: #96aac1;
-}
-
-.nice-select.wide {
-	width: 100%;
-}
-
-.nice-select.wide .list {
-	left: 0 !important;
-	right: 0 !important;
-}
-
-.nice-select.right {
-	float: right;
-}
-
-.nice-select.right .list {
-	left: auto;
-	right: 0;
-}
-
-.nice-select.small {
-	font-size: 12px;
-	height: 36px;
-	line-height: 34px;
-}
-
-.nice-select.small::after {
-	height: 4px;
-	width: 4px;
-}
-
-.nice-select.small .option {
-	line-height: 34px;
-	min-height: 34px;
-}
-
-.nice-select .list {
-	background-color: var(--white);
-	border-radius: 5px;
-	-webkit-box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
-	box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	margin-top: 4px;
-	opacity: 0;
-	overflow: hidden;
-	padding: 0;
-	pointer-events: none;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	-webkit-transform-origin: 50% 0;
-	transform-origin: 50% 0;
-	-webkit-transform: scale(0.75) translateY(-21px);
-	transform: scale(0.75) translateY(-21px);
-	-webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-	transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-	z-index: 9;
-	width: 100%;
-}
-
-.nice-select .list:hover .option:not(:hover) {
-	background-color: transparent !important;
-}
-
-.nice-select .option {
-	cursor: pointer;
-	font-weight: 500;
-	line-height: 40px;
-	list-style: none;
-	min-height: 40px;
-	outline: none;
-	padding-left: 18px;
-	padding-right: 29px;
-	text-align: left;
-	-webkit-transition: all 0.2s;
-	transition: all 0.2s;
-}
-
-.nice-select .option:hover,
-.nice-select .option.focus,
-.nice-select .option.selected.focus {
-	background-color: #f6f6f6;
-}
-
-.nice-select .option.selected {
-	font-weight: 800;
-}
-
-.nice-select .option.disabled {
-	background-color: transparent;
-	color: #999999;
-	cursor: default;
-}
-
-.no-csspointerevents .nice-select .list {
-	display: none;
-}
-
-.no-csspointerevents .nice-select.open .list {
-	display: block;
-}
 
 
 /* ============================================================== 
@@ -7836,10 +7575,10 @@ footer {
 
 
 /* Custom Layout */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 500px) {
 
-	/* Navbar */
-	nav.navbar.validnavs.inc-shape::after {
+	Navbar 
+	 nav.navbar.validnavs.inc-shape::after {
 		display: none;
 	}
 
@@ -8345,6 +8084,9 @@ ol {
 }
 
 @media (max-width: 480px) {
+	.navbar-brand {
+        display: block; /* Garante que o logotipo seja exibido como bloco */
+    }
 	.parent {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
@@ -8427,9 +8169,15 @@ ol {
 
 
 .navigation-bar {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.288);
 	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .maps{
@@ -8440,17 +8188,7 @@ ol {
 	height: 400px;
 }
 
-.navigation-bar {
-	background-color: rgba(0, 0, 0, 0.5);
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 2;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+
 
 .heading-video2{
 	font-weight: 900;
@@ -8646,6 +8384,7 @@ footer {
 	padding-bottom: 40px; 
 	font-family: 'Baloo Da 2', cursive; 
 	font-weight: bold;
+	
 }
 
 
@@ -8655,9 +8394,9 @@ footer {
 		width: 610px;
 	}
 
-	.logo-logo {
+	/* .logo-logo {
 		margin-bottom: 110px;
-	}
+	} */
 
 	.navigation-bar {
 		background-color: rgba(0, 0, 0, 0.5);
@@ -8715,7 +8454,8 @@ footer {
 
 	.button-port {
 		margin-top: 120px;
-		margin-left: 24%;
+		display: flex;
+		justify-content: center;
 		width: 400px;
 		padding-left: 65px;
 		border: solid 1px;
@@ -8726,7 +8466,7 @@ footer {
 	}
 
 	.grid-container {
-		margin-left: 25%;
+		margin-left: 20%;
 		width: 1000px;
 		display: grid;
 		grid-gap: 20px;
@@ -8812,6 +8552,18 @@ footer {
 }
 
 @media (max-width: 500px) {
+	
+.heading-instagram{
+	padding-top: 70px; 
+	margin-top: 100px; 
+	padding-bottom: 40px; 
+	font-family: 'Baloo Da 2', cursive; 
+	font-weight: bold;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 	.contact-area{
 		height: 1880px;
@@ -8930,11 +8682,11 @@ footer {
 
 
 
-	.logo-logo {
+	/* .logo-logo {
 		height: 80px;
 		padding-top: 10px;
 		top: 15%;
-	}
+	} */
 
 	.navigation-bar {
 		background-color: rgba(0, 0, 0, 0.5);
@@ -8993,9 +8745,9 @@ footer {
 		margin-bottom: 10px;
 	}
 
-	.nav .nav-title {
+	/* .nav .nav-title {
 		color: black;
-	}
+	} */
 }
 
 	@media (min-width: 1900px) {
@@ -9018,10 +8770,10 @@ footer {
 
 
 /*  */
-
+/* 
 	.navbar-collapse:not(.show) .hidden-on-main {
         display: none;
-    }
+    } */
 
 	
 	/* .navigation-bar {
