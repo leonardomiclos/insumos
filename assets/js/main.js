@@ -836,6 +836,18 @@ function consultarClima(latitude, longitude, origem) {
 		});
 }
 
+ // Função para verificar se o dispositivo é móvel
+ function isMobileDevice() {
+	return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+
+// Verificar se é um dispositivo móvel e mostrar ou ocultar a imagem
+if (isMobileDevice()) {
+	document.getElementById("mobile-image").style.display = "block";
+} else {
+	document.getElementById("mobile-image").style.display = "none";
+}
+
 
 
 
