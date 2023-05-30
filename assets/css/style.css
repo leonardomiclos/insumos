@@ -8796,10 +8796,31 @@ footer {
 		opacity: 1;
 	  }
 
-	  @media (max-width: 767px) {
-	
-	}
 
+	  
+	  @media (min-width: 768px) {
+		.logo-aboutus-mobile {
+		  display: none;
+		}
+	  }
+
+	  @media (max-width: 768px) {
+		.logo-aboutus-mobile {
+		  display: block;
+		}
+	  }
+	  
+	  @media (max-width: 480px) {
+		.logo-aboutus-mobile {
+		  display: block;
+		}
+	  }
+	  
+	  @media (max-width: 390px) {
+		.logo-aboutus-mobile {
+		  display: block;
+		}
+	  }
 
 
 	  

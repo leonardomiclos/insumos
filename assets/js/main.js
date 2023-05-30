@@ -932,13 +932,3 @@ function exibirErro(error) {
 })(document, 'script', 'tomorrow-sdk');
 
 
-$(function () {
-	$('[data-toggle="popover"]').popover();
-});
-
-
-
-
-
-
-
