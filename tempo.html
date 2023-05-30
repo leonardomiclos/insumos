@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Consulta de Clima</title>
+  <style>
+    @media only screen and (max-width: 600px) {
+      .previsoes {
+        flex-wrap: wrap;
+      }
+
+      .previsao {
+        flex-basis: 100%;
+      }
+    }
+
+    /* Estilos para telas maiores */
+    @media only screen and (min-width: 601px) {
+      .previsao {
+        flex-basis: calc(17% - 20px);
+      }
+    }
+
+    .weather-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+    }
+
+    #cidade {
+      font-family: 'Arial', cursive;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .previsoes {
+      display: -webkit-box;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .previsao {
+      font-family: 'Baloo Da 2', cursive;
+      font-size: small;
+      flex-basis: calc(17% - 20px);
+      margin-bottom: 20px;
+      padding: 10px;
+      text-align: center;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background-color: #FFFFFF;
+    }
+
+    .previsao:nth-child(even) {
+      background-color: #F5F5F5;
+    }
+
+    .previsao img {
+      width: 50px;
+      margin-left: 10px;
+    }
+
+    .previsao .descricao {
+      margin-bottom: 10px;
+    }
+
+    .previsao .temperatura {
+      margin-top: 10px;
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .input-container input {
+      margin-right: 10px;
+    }
+
+    .input-container button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .input-container button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="weather-container" style="height: 29px;">
+    <h3 id="cidade"></h3>
+    <div class="previsoes" id="div-resultado"></div>
+  </div>
+
+  <div class="input-container">
+    <input type="text" id="cidade-input" placeholder="Digite o nome da cidade">
+    <button onclick="consultarPorCidade()">&#128269;</button>
+  </div>
+
+  <script>
+    function obterCoordenadas(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      consultarClimaPorCoordenadas(latitude, longitude);
+    }
+
+    function exibirErro(error) {
+      console.log('Erro ao obter localização:', error.message);
+    }
+
+    function consultarPorLocalizacao() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(obterCoordenadas, exibirErro, { timeout: 30000 });
+      } else {
+        console.log('Geolocalização não é suportada pelo seu navegador.');
+      }
+    }
+
+    function consultarClimaPorCidade(cidade) {
+      const apiKey = '029a75ece8e240568c72d05e01a3ec2c';
+      const url = `https://api.openweathermap.org/data/2.5/forecast?q=${cidade}&appid=${apiKey}&lang=pt&units=metric`;
+
+      fetch(url)
+        .then(response => {
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error('Falha na solicitação. Código de status: ' + response.status);
+        })
+        .then(data => {
+          console.log('Resposta da API:', data);
+          exibirDadosTempo(data, cidade);
+        })
+        .catch(error => {
+          console.log('Erro:', error.message);
+        });
+    }
+
+    function consultarClimaPorCoordenadas(latitude, longitude) {
+      const apiKey = '72390b920ba2457d879b5dfa59a2d6db';
+      const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&lang=pt&units=metric`;
+
+      fetch(url)
+        .then(response => {
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error('Falha na solicitação. Código de status: ' + response.status);
+        })
+        .then(data => {
+          console.log('Resposta da API:', data);
+          exibirDadosTempo(data);
+        })
+        .catch(error => {
+          console.log('Erro:', error.message);
+        });
+    }
+
+    function exibirDadosTempo(data, cidade) {
+      const previsoes = data.list.filter((previsao, index) => index % 8 === 0);
+
+      const previsoesMaxMinDia = [];
+      for (let i = 0; i < previsoes.length; i++) {
+        const previsaoDia = previsoes[i];
+        const dataPrevisaoDia = new Date(previsaoDia.dt * 1000).toLocaleDateString('pt-BR', { weekday: 'short', day: 'numeric'});
+        const previsoesJanelaDia = data.list.filter(previsao => {
+          const dataPrevisao = new Date(previsao.dt * 1000).toLocaleDateString('pt-BR', { weekday: 'short', day: 'numeric'});
+          return dataPrevisao === dataPrevisaoDia && new Date(previsao.dt * 1000).getHours() >= 1 && new Date(previsao.dt * 1000).getHours() <= 23;
+        });
+
+        const temperaturaMaximaDia = Math.round(Math.max(...previsoesJanelaDia.map(previsao => previsao.main.temp_max)));
+        const temperaturaMinimaDia = Math.round(Math.min(...previsoesJanelaDia.map(previsao => previsao.main.temp_min)));
+
+        previsoesMaxMinDia.push({ max: temperaturaMaximaDia, min: temperaturaMinimaDia });
+      }
+
+      document.getElementById('cidade').textContent = cidade || data.city.name;
+
+      const divResultado = document.getElementById('div-resultado');
+      divResultado.innerHTML = `
+        <div class="previsoes" style="height: 30px;">
+          <div class="previsao">           
+            <div>
+              <span class="temperatura">${Math.round(previsoes[0].main.temp)}°C</span>
+              <img src="https://openweathermap.org/img/w/${previsoes[0].weather[0].icon}.png" alt="${previsoes[0].weather[0].description}">  
+            </div>
+          </div>
+          ${previsoes.map((previsao, index) => `
+            <div class="previsao">
+              ${formatarData(previsao.dt)} 
+              <span style="color:f5f1f1 " class="temperatura">${previsoesMaxMinDia[index].max}°C | ${previsoesMaxMinDia[index].min}°C</span>
+              <img src="https://openweathermap.org/img/w/${previsao.weather[0].icon}.png" alt="${previsao.weather[0].description}">  
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function formatarData(timestamp) {
+      const data = new Date(timestamp * 1000);
+      return data.toLocaleDateString('pt-BR', { weekday: 'short', day: 'numeric', month: 'short' });
+    }
+
+    function consultarPorCidade() {
+      const cidadeInput = document.getElementById('cidade-input');
+      const cidade = cidadeInput.value;
+      consultarClimaPorCidade(cidade);
+    }
+
+    consultarPorLocalizacao();
+  </script>
+</body>
+
+</html>
