@@ -7256,25 +7256,7 @@ footer {
 	}
 
 
-	/* Choose Us Style Two */
-
-	.choose-us-style-two .fun-fact-style-one .fun-fact {
-		text-align: left;
-	}
-
-	.choose-us-style-two .fun-fact-style-one .fun-fact {
-		justify-content: left;
-		margin: 0;
-		margin-top: 30px;
-	}
-
-	.choose-us-style-two .fun-fact-style-one .fun-fact .counter {
-		justify-content: left;
-	}
-
-	.half-bg-light::after {
-		height: 100%;
-	}
+	
 
 
 	/* Services */
@@ -7577,10 +7559,10 @@ footer {
 /* Custom Layout */
 @media only screen and (max-width: 500px) {
 
-	Navbar 
+	/* Navbar 
 	 nav.navbar.validnavs.inc-shape::after {
 		display: none;
-	}
+	} */
 
 	.breadcrumb-area h1 {
 		font-size: 36px;
@@ -8184,7 +8166,7 @@ ol {
 	background-color: grey;
 	margin-top: 100px;
 	margin-bottom: 100px;
-	width: 100%;
+	width: 80%;
 	height: 400px;
 }
 
@@ -8386,6 +8368,17 @@ footer {
 	font-weight: bold;
 	
 }
+
+.logo-mobile {
+	width: 50%;
+  }
+
+@media (min-width: 769px) {
+	.logo-mobile {
+	  display: none;
+	}
+  }
+  
 
 
 @media (max-width: 768px) {
@@ -8766,6 +8759,38 @@ footer {
 			flex-wrap: wrap;
 		  }
 	}
+
+	.tooltip {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+	  }
+  
+	  .tooltip .tooltiptext {
+		visibility: hidden;
+		width: 120px;
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px;
+		position: absolute;
+		z-index: 1;
+		bottom: 125%;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
+		transition: opacity 0.3s;
+	  }
+  
+	  .tooltip:hover .tooltiptext {
+		visibility: visible;
+		opacity: 1;
+	  }
+
+
+
+	  
 
 
 

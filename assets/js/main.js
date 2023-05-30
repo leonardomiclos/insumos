@@ -270,7 +270,7 @@
 				prevEl: ".swiper-button-prev"
 			},
 			breakpoints: {
-				390:{
+				390: {
 					slidesPerView: 2,
 				},
 				768: {
@@ -307,7 +307,7 @@
 				prevEl: ".swiper-button-prev"
 			},
 			breakpoints: {
-				390:{
+				390: {
 					slidesPerView: 2,
 				},
 				768: {
@@ -397,7 +397,7 @@
 				prevEl: ".swiper-button-prev"
 			},
 			breakpoints: {
-				390:{
+				390: {
 					slidesPerView: 2,
 				},
 				768: {
@@ -553,7 +553,7 @@
 			spaceBetween: 30,
 			autoplay: true,
 			breakpoints: {
-				390:{
+				390: {
 					slidesPerView: 2,
 				},
 				768: {
@@ -586,7 +586,7 @@
 				prevEl: '.swiper-button-prev',
 			},
 			breakpoints: {
-				390:{
+				390: {
 					slidesPerView: 2,
 				},
 				480: {
@@ -615,7 +615,7 @@
 			spaceBetween: 30,
 			autoplay: true,
 			breakpoints: {
-				390:{
+				390: {
 					slidesPerView: 2,
 				},
 				768: {
@@ -659,7 +659,7 @@
 		spaceBetween: 30,
 		autoplay: true,
 		breakpoints: {
-			390:{
+			390: {
 				slidesPerView: 2,
 			},
 			768: {
@@ -715,156 +715,192 @@ function scrollToDivWork() {
 }
 
 function consultarPorLocalizacao() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(obterCoordenadas, exibirErro);
-    } else {
-        console.log('Geolocalização não é suportada pelo seu navegador.');
-    }
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(obterCoordenadas, exibirErro, { timeout: 30000 });
+	} else {
+		console.log('Geolocalização não é suportada pelo seu navegador.');
+	}
 }
 
 function obterCoordenadas(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    consultarClima(latitude, longitude, 'Localização Automática');
+	const latitude = position.coords.latitude;
+	const longitude = position.coords.longitude;
+	consultarClima(latitude, longitude, 'Localização Automática');
 }
 
 function consultarTempo() {
-    const apiKey = '72390b920ba2457d879b5dfa59a2d6db'; // Sua chave de API do OpenWeatherMap
-    const cidade = document.getElementById('cidade').value; // Obtém o valor inserido no campo de entrada
+	const apiKey = '72390b920ba2457d879b5dfa59a2d6db'; // Sua chave de API do OpenWeatherMap
+	const cidade = document.getElementById('cidade').value; // Obtém o valor inserido no campo de entrada
 
-    // URL da API do OpenWeatherMap
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&lang=pt`;
+	// URL da API do OpenWeatherMap
+	const url = `http://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&lang=pt`;
 
-    // Fazendo a solicitação GET usando o método fetch
-    fetch(url)
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            }
-            throw new Error('Falha na solicitação. Código de status: ' + response.status);
-        })
-        .then(data => {
-            // Processar os dados retornados pela API
-            exibirDadosTempo(data);
-        })
-        .catch(error => {
-            console.log('Erro:', error.message);
-        });
+	// Fazendo a solicitação GET usando o método fetch
+	fetch(url)
+		.then(response => {
+			if (response.ok) {
+				return response.json();
+			}
+			throw new Error('Falha na solicitação. Código de status: ' + response.status);
+		})
+		.then(data => {
+			// Processar os dados retornados pela API
+			exibirDadosTempo(data);
+		})
+		.catch(error => {
+			console.log('Erro:', error.message);
+		});
 }
 
 function consultarTempo() {
-    const apiKey = '72390b920ba2457d879b5dfa59a2d6db'; // Sua chave de API do OpenWeatherMap
-    const cidade = document.getElementById('cidade').value; // Obtém o valor inserido no campo de entrada
+	const apiKey = '72390b920ba2457d879b5dfa59a2d6db'; // Sua chave de API do OpenWeatherMap
+	const cidade = document.getElementById('cidade').value; // Obtém o valor inserido no campo de entrada
 
-    // URL da API do OpenWeatherMap
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&lang=pt`;
+	// URL da API do OpenWeatherMap
+	const url = `http://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&lang=pt`;
 
-    // Fazendo a solicitação GET usando o método fetch
-    fetch(url)
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            }
-            throw new Error('Falha na solicitação. Código de status: ' + response.status);
-        })
-        .then(data => {
-            // Processar os dados retornados pela API
-            exibirDadosTempoManual(data);
-        })
-        .catch(error => {
-            console.log('Erro:', error.message);
-        });
+	// Fazendo a solicitação GET usando o método fetch
+	fetch(url)
+		.then(response => {
+			if (response.ok) {
+				return response.json();
+			}
+			throw new Error('Falha na solicitação. Código de status: ' + response.status);
+		})
+		.then(data => {
+			// Processar os dados retornados pela API
+			exibirDadosTempoManual(data);
+		})
+		.catch(error => {
+			console.log('Erro:', error.message);
+		});
 }
 
 function exibirDadosTempoManual(data) {
-    const nomeCidade = data.name;
-    const temperaturaKelvin = data.main.temp;
-    const temperaturaCelsius = temperaturaKelvin - 273.15;
-    const descricao = data.weather[0].description;
-    const icone = data.weather[0].icon;
+	const nomeCidade = data.name;
+	const temperaturaKelvin = data.main.temp;
+	const temperaturaCelsius = temperaturaKelvin - 273.15;
+	const descricao = data.weather[0].description;
+	const icone = data.weather[0].icon;
 
 
-    const resultado = `Cidade: ${nomeCidade}<br>
+	const resultado = `Cidade: ${nomeCidade}<br>
                  Temperatura: ${temperaturaCelsius.toFixed(2)} °C<br>
                  <img src="http://openweathermap.org/img/wn/${icone}.png" alt="Ícone do Tempo"> Descrição: ${descricao}
                  `;
 
 
-    document.getElementById('resultado-manual').innerHTML = resultado;
+	document.getElementById('resultado-manual').innerHTML = resultado;
 }
 
 // ----------------------------------- APARTIR DAQUI CONSULTA AUTOMÁTICA -------------------------------------------------------------------------
 
 
 function consultarPorLocalizacao() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(obterCoordenadas, exibirErro);
-    } else {
-        console.log('Geolocalização não é suportada pelo seu navegador.');
-    }
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(obterCoordenadas, exibirErro, { timeout: 30000 });
+	} else {
+		console.log('Geolocalização não é suportada pelo seu navegador.');
+	}
 }
 
 
 function obterCoordenadas(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    consultarClima(latitude, longitude, 'Localização Automática');
-    const divResultado = document.getElementById('div-resultado');
-    divResultado.innerHTML = '<div id="resultado"></div>';
-    consultarClima(latitude, longitude, 'Localização Automática', 'resultado');
-    document.getElementById('botao-automatico').style.display = 'none';
+	const latitude = position.coords.latitude;
+	const longitude = position.coords.longitude;
+	consultarClima(latitude, longitude, 'Localização Automática');
+	const divResultado = document.getElementById('div-resultado');
+	divResultado.innerHTML = '<div id="resultado"></div>';
+	consultarClima(latitude, longitude, 'Localização Automática', 'resultado');
+	document.getElementById('botao-automatico').style.display = 'none';
 }
 
 
 function consultarClima(latitude, longitude, origem) {
-    const apiKey = '72390b920ba2457d879b5dfa59a2d6db'; // Sua chave de API do OpenWeatherMap
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&lang=pt `;
+	const apiKey = '72390b920ba2457d879b5dfa59a2d6db'; // Sua chave de API do OpenWeatherMap
+	const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&lang=pt `;
 
-    fetch(url)
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            }
-            throw new Error('Falha na solicitação. Código de status: ' + response.status);
-        })
-        .then(data => {
-            exibirDadosTempo(data, origem);
-        })
-        .catch(error => {
-            console.log('Erro:', error.message);
-        });
+	fetch(url)
+		.then(response => {
+			if (response.ok) {
+				return response.json();
+			}
+			throw new Error('Falha na solicitação. Código de status: ' + response.status);
+		})
+		.then(data => {
+      console.log('Resposta da API:', data);
+      exibirDadosTempo(data, origem);
+		})
+		.catch(error => {
+			console.log('Erro:', error.message);
+		});
 }
 
 
-function exibirDadosTempo(data, origem) {
-    const nomeCidade = data.name;
-    const temperaturaKelvin = data.main.temp;
-    const temperaturaCelsius = temperaturaKelvin - 273.15;
-    const descricao = data.weather[0].description;
-    const icone = data.weather[0].icon;
-    const timestamp = data.dt;
-    const dataHora = moment.unix(timestamp).locale('pt-br');
-    const dataFormatada = dataHora.format('D MMMM'); // Formato de dia e mês por extenso em português
-
-    const primeiraLetraMaiuscula = dataFormatada.charAt(0).toUpperCase();
-    const restanteDoMes = dataFormatada.slice(1);
-    
-    const dataFormatadaCapitalizada = primeiraLetraMaiuscula + restanteDoMes;
-
-	// ${dataFormatadaCapitalizada}<br></br>
-
-    const resultado = `
-                   ${nomeCidade}, BR
-                   ${temperaturaCelsius.toFixed(0)} °C
-                   ${descricao}
-                   `;
 
 
-    document.getElementById('resultado').innerHTML = resultado;
-}
+// function exibirPrevisao(data, origem) {
+// 	const previsoes = data.list;
+// 	const resultado = document.getElementById('resultado');
+// 	resultado.innerHTML = '';
+  
+// 	const nomeCidade = data.city.name;
+// 	const tituloCidade = document.createElement('h2');
+// 	tituloCidade.textContent = nomeCidade;
+// 	resultado.appendChild(tituloCidade);
+  
+// 	const datasExibidas = new Set();
+// 	const hoje = moment().startOf('day').unix();
+  
+// 	for (let i = 0; i < previsoes.length; i++) {
+// 	  const previsao = previsoes[i];
+// 	  const timestamp = previsao.dt;
+// 	  const dataHora = moment.unix(timestamp).locale('pt-br');
+// 	  const dataFormatada = dataHora.format('D MMMM');  Formato de dia e mês por extenso em português
+// 	  const dataDia = dataHora.startOf('day').unix();
+  
+// 	  if (dataDia >= hoje && !datasExibidas.has(dataDia)) {
+// 		datasExibidas.add(dataDia);
+  
+// 		let temperaturaMax = -Infinity;
+// 		let temperaturaMin = Infinity;
+  
+// 		Encontrar as temperaturas máxima e mínima do dia
+// 		for (let j = i; j < i + 8; j++) {
+// 		  const temp = previsoes[j].main.temp;
+// 		  if (temp > temperaturaMax) {
+// 			temperaturaMax = temp;
+// 		  }
+// 		  if (temp < temperaturaMin) {
+// 			temperaturaMin = temp;
+// 		  }
+// 		}
+  
+// 		const descricao = previsao.weather[0].description;
+// 		const icone = previsao.weather[0].icon;
+  
+// 		const itemPrevisao = document.createElement('div');
+// 		itemPrevisao.classList.add('previsao-item');
+// 		itemPrevisao.innerHTML = `
+// 		  <div class="data">${dataFormatada}</div>
+// 		  <div class="temperatura">Máx: ${temperaturaMax.toFixed(0)} °C</div>
+// 		  <div class="temperatura">Min: ${temperaturaMin.toFixed(0)} °C</div>
+// 		  <div class="descricao">${descricao}</div>
+// 		  <img src="http://openweathermap.org/img/w/${icone}.png" alt="Ícone do tempo">
+// 		`;
+  
+// 		resultado.appendChild(itemPrevisao);
+// 	  }
+  
+// 	  if (datasExibidas.size >= 7) {
+// 		break;
+// 	  }
+// 	}
+//   }
+  
 
 function exibirErro(error) {
-    console.log('Erro ao obter localização:', error.message);
+	console.log('Erro ao obter localização:', error.message);
 }
 
 
@@ -885,11 +921,11 @@ function exibirErro(error) {
 
 
 $(function () {
-    $('[data-toggle="popover"]').popover();
+	$('[data-toggle="popover"]').popover();
 });
 
 
-  
+
 
 
 
