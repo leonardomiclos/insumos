@@ -1,78 +1,4 @@
-/* ----------------------------------
 
-
-Main Font    : Manrope
-Main Color   : #6222cc
-
--------------------------------------
-
-[Typography]
-
-Body copy:    15px 'Manrope', sans-serif
-Header:     36px 'Manrope', sans-serif
-Input, textarea:  16px 'Manrope', sans-serif
-Sidebar heading:  20px 'Manrope', sans-serif
-
->>> TABLE OF CONTENTS:
-=======================
-        
-    01. Template default css
-        - Animations
-        - General
-        - Section Title
-        - Video Button
-        - Typography
-        - Tables
-        - Forms
-        - Buttons
-        - Pagination
-        - Colors
-    02. Preloader
-    03. Topbar
-	    - Topbar Regular
-        - Topbar With Menu
-    04 Navbar
-        - Navbar Default
-        - Navbar Right Menu
-        - Navbar Sticky
-        - Navbar Center
-    05. Banner
-        - Banner Style One
-        - Banner Style Two
-    06. About Us
-	    - About Style One
-        - About Style Two
-    07. Services
-        - What We Do (Slider)
-        - Services With Image & Icon
-        - Services Single
-    09. Product
-		- Product Light Version
-        - Product Dark Version
-    10. Why Choose Us
-    11. Fun Factor
-    12. Testimonials
-    13. Farmers
-        - Farmer Grid
-        - Farmer Details
-    14. Projects
-        - Project Slider
-        - Prject Grid
-        - Prject Details
-    15. Order Process
-    16. Clients / Brand
-    17. Blog
-        - Standard
-        - Blog Grid
-        - Left Sidebar
-        - Right Sidebar
-        - Single
-    18. Error 404
-    19. Footer
-    20. PHP Contact Form
-    21. Others
-
-*/
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Baloo+Da+2:wght@500&family=Dancing+Script&family=Indie+Flower&family=Righteous&family=Roboto:wght@100&family=Satisfy&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Dancing+Script&family=Indie+Flower&family=Satisfy&display=swap');
@@ -109,7 +35,11 @@ Sidebar heading:  20px 'Manrope', sans-serif
 /* ============================================================== 
      # Reset Browsers
 =================================================================== */
-
+.nav>li>a:hover,
+.nav>li>a:focus {
+	text-decoration: none;
+	background-color: #858585;
+}
 * {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -2306,194 +2236,7 @@ p {
 	font-size: 14px;
 }
 
-/* ============================================================== 
-    # Nice Select Styles
-=================================================================== */
-.nice-select {
-	-webkit-tap-highlight-color: transparent;
-	background-color: var(--white);
-	border: solid 1px #e8e8e8;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	clear: both;
-	cursor: pointer;
-	display: block;
-	float: left;
-	font-family: inherit;
-	font-size: 16px;
-	font-weight: normal;
-	height: 50px;
-	line-height: 50px;
-	outline: none;
-	padding-left: 18px;
-	padding-right: 30px;
-	position: relative;
-	text-align: left !important;
-	-webkit-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	white-space: nowrap;
-	width: 100%;
-	margin-bottom: 15px;
-}
 
-.nice-select:hover {
-	border-color: #dbdbdb;
-}
-
-.nice-select:active,
-.nice-select.open,
-.nice-select:focus {
-	border-color: #999999;
-}
-
-.nice-select::after {
-	border-bottom: 2px solid #999999;
-	border-right: 2px solid #999999;
-	content: '';
-	display: block;
-	height: 5px;
-	margin-top: -6px;
-	pointer-events: none;
-	position: absolute;
-	right: 12px;
-	top: 50%;
-	-webkit-transform-origin: 66% 66%;
-	transform-origin: 66% 66%;
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-	-webkit-transition: all 0.15s ease-in-out;
-	transition: all 0.15s ease-in-out;
-	width: 5px;
-}
-
-.nice-select.open .list {
-	opacity: 1;
-	pointer-events: auto;
-	-webkit-transform: scale(1) translateY(0);
-	transform: scale(1) translateY(0);
-	overflow-y: auto !important;
-	height: auto;
-}
-
-.nice-select.open ::after {
-	-webkit-transform: rotate(-135deg);
-	transform: rotate(-135deg);
-}
-
-.nice-select.disabled {
-	border-color: #ededed;
-	color: #999999;
-	pointer-events: none;
-}
-
-.nice-select.disabled::after {
-	border-color: #96aac1;
-}
-
-.nice-select.wide {
-	width: 100%;
-}
-
-.nice-select.wide .list {
-	left: 0 !important;
-	right: 0 !important;
-}
-
-.nice-select.right {
-	float: right;
-}
-
-.nice-select.right .list {
-	left: auto;
-	right: 0;
-}
-
-.nice-select.small {
-	font-size: 12px;
-	height: 36px;
-	line-height: 34px;
-}
-
-.nice-select.small::after {
-	height: 4px;
-	width: 4px;
-}
-
-.nice-select.small .option {
-	line-height: 34px;
-	min-height: 34px;
-}
-
-.nice-select .list {
-	background-color: var(--white);
-	border-radius: 5px;
-	-webkit-box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
-	box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	margin-top: 4px;
-	opacity: 0;
-	overflow: hidden;
-	padding: 0;
-	pointer-events: none;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	-webkit-transform-origin: 50% 0;
-	transform-origin: 50% 0;
-	-webkit-transform: scale(0.75) translateY(-21px);
-	transform: scale(0.75) translateY(-21px);
-	-webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-	transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-	z-index: 9;
-	width: 100%;
-}
-
-.nice-select .list:hover .option:not(:hover) {
-	background-color: transparent !important;
-}
-
-.nice-select .option {
-	cursor: pointer;
-	font-weight: 500;
-	line-height: 40px;
-	list-style: none;
-	min-height: 40px;
-	outline: none;
-	padding-left: 18px;
-	padding-right: 29px;
-	text-align: left;
-	-webkit-transition: all 0.2s;
-	transition: all 0.2s;
-}
-
-.nice-select .option:hover,
-.nice-select .option.focus,
-.nice-select .option.selected.focus {
-	background-color: #f6f6f6;
-}
-
-.nice-select .option.selected {
-	font-weight: 800;
-}
-
-.nice-select .option.disabled {
-	background-color: transparent;
-	color: #999999;
-	cursor: default;
-}
-
-.no-csspointerevents .nice-select .list {
-	display: none;
-}
-
-.no-csspointerevents .nice-select.open .list {
-	display: block;
-}
 
 
 /* ============================================================== 
@@ -2635,6 +2378,8 @@ p {
 
 .top-bar-area {
 	overflow: hidden;
+	background-color: #FD7D07;
+	 width: 100%;
 }
 
 .top-bar-area .flex-item i {
@@ -6385,10 +6130,9 @@ li.project-feature-list h4 {
 =================================================================== */
 
 .contact-area {
-	height: 1330px;
 	background-size: 20%;
 	background-repeat: no-repeat;
-	background-position: right bottom;
+	background-position: right top;
 }
 
 .contact-area .shape-left-top {
@@ -7831,10 +7575,10 @@ footer {
 
 
 /* Custom Layout */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 500px) {
 
-	/* Navbar */
-	nav.navbar.validnavs.inc-shape::after {
+	Navbar 
+	 nav.navbar.validnavs.inc-shape::after {
 		display: none;
 	}
 
@@ -8275,6 +8019,22 @@ ol {
 	display: none;
 }
 
+.circle-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	background-color: orange;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.circle-icon i {
+	color: white;
+	font-size: 24px;
+}
+
 /* Media query para dispositivos móveis */
 @media (max-width: 1320px) {
 	.desktop-only {
@@ -8324,6 +8084,9 @@ ol {
 }
 
 @media (max-width: 480px) {
+	.navbar-brand {
+        display: block; /* Garante que o logotipo seja exibido como bloco */
+    }
 	.parent {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
@@ -8332,7 +8095,13 @@ ol {
 	}
 }
 
+/* APARTIR DAQUI */
 
+#container-video{
+	border-top: solid 1px gainsboro; 
+	border-bottom: solid 1px gainsboro; 
+	background: url(assets/img/shape/23.png);
+}
 .grid-container {
 	margin-left: 25%;
 	width: 1000px;
@@ -8400,19 +8169,7 @@ ol {
 
 
 .navigation-bar {
-	background-color: rgba(0, 0, 0, 0.5);
-	width: 100%;
-	z-index: 2;
-
-}
-
-.maps{
-	width: 1200px;
-	height: 320px;
-}
-
-.navigation-bar {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.288);
 	width: 100%;
 	position: absolute;
 	top: 0;
@@ -8423,9 +8180,211 @@ ol {
 	justify-content: center;
 }
 
+.maps{
+	background-color: grey;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	width: 100%;
+	height: 400px;
+}
+
+
+
 .heading-video2{
+	font-weight: 900;
+	padding-top: 20px;
 	display: flex;
 	justify-content: center;
+}
+
+footer {
+	background-color: rgb(255, 255, 255);
+	padding: 20px;
+	text-align: center;
+	border-top: 2px solid #fff;
+  }
+  
+  .container-footer {
+	max-width: 960px;
+	margin: 0 auto;
+  }
+  
+  .container-footer p {
+	margin: 5px 0;
+  }
+  
+  .container-footer a {
+	color: #555;
+	text-decoration: none;
+  }
+  
+  /* .logo-container {
+	margin-bottom: 20px;
+  }
+   */
+  .logo-container img {
+	max-width: 250px;
+  }
+  
+  .footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+  }
+  
+  .company-info p {
+	margin-bottom: 5px;
+  }
+  
+  .social-media a {
+	display: inline-block;
+	margin-right: 10px;
+	color: #555;
+	font-size: 18px;
+  }
+  
+  .footer-bottom-bot {
+	margin-top: 20px;
+  }
+
+  .container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.contact-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contact-info {
+	flex: 1;
+	padding-right: 60px;
+	padding-top: 15px;
+}
+
+.contact-info-2 {
+	flex: 1;
+	padding-right: 60px;
+	padding-bottom: 155px;
+}
+
+.contact-info h2 {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.contact-info h2 span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	overflow: hidden;
+}
+
+.contact-info h2 span svg {
+	width: 100%;
+	height: 20px;
+	transform: rotate(180deg);
+}
+
+.contact-info p {
+	margin-bottom: 30px;
+}
+
+.contact-info ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.contact-info ul li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.circle-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	background-color: orange;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.circle-icon i {
+	color: white;
+	font-size: 24px;
+}
+
+.contact-info .title {
+	margin-bottom: 5px;
+}
+
+.work-with-us {
+	width: 400px;
+	height: 200px;
+	background-color: orange;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.work-with-us h2 {
+	margin-bottom: 10px;
+}
+
+.work-with-us button {
+	font-style: italic;
+	width: 200px;
+	background-color: #FD7D07;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.info-social{
+	display: flex;
+	flex-direction: row; 
+	justify-content: space-between; 
+	align-items: center; 
+	height: 50px;
+}
+
+
+
+.button-shop{
+	width: 100px; border: none; background: none; color: #ffffff; font-family: Manrope, sans-serif; font-weight: 600;
+}
+
+.nav-title{
+	color: #eef2f5;
+}
+.logo-aboutus{
+	width: 75%; margin-top: 75px; margin-right: 75px;
+}
+
+#about-container{
+	padding-left: 115px; padding-bottom: 120px;
+}
+
+.heading-instagram{
+	padding-top: 70px; 
+	margin-top: 100px; 
+	padding-bottom: 40px; 
+	font-family: 'Baloo Da 2', cursive; 
+	font-weight: bold;
+	
 }
 
 
@@ -8435,9 +8394,9 @@ ol {
 		width: 610px;
 	}
 
-	.logo-logo {
+	/* .logo-logo {
 		margin-bottom: 110px;
-	}
+	} */
 
 	.navigation-bar {
 		background-color: rgba(0, 0, 0, 0.5);
@@ -8495,7 +8454,8 @@ ol {
 
 	.button-port {
 		margin-top: 120px;
-		margin-left: 24%;
+		display: flex;
+		justify-content: center;
 		width: 400px;
 		padding-left: 65px;
 		border: solid 1px;
@@ -8506,7 +8466,7 @@ ol {
 	}
 
 	.grid-container {
-		margin-left: 25%;
+		margin-left: 20%;
 		width: 1000px;
 		display: grid;
 		grid-gap: 20px;
@@ -8517,6 +8477,15 @@ ol {
 
 @media (max-width: 390px) {
 
+	.contact-area{
+		height: 1880px;
+	}
+	.footer-content {
+		display: flex;
+		justify-content: center	;
+		align-items: center;
+		flex-wrap: wrap;
+	  }
 	.maps{
 		width: 250px;
 	}
@@ -8579,13 +8548,32 @@ ol {
 		padding-bottom: 20px;
 	}
 
-	.contact-area {
-		background-size: 0%;
-		height: 1660px;
-	}
+	
 }
 
 @media (max-width: 500px) {
+	
+.heading-instagram{
+	padding-top: 70px; 
+	margin-top: 100px; 
+	padding-bottom: 40px; 
+	font-family: 'Baloo Da 2', cursive; 
+	font-weight: bold;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+	.contact-area{
+		height: 1880px;
+	}
+	.footer-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	  }
 	.video-youtube {
 		margin-left: 10px;
 		width: 450px;
@@ -8694,11 +8682,11 @@ ol {
 
 
 
-	.logo-logo {
+	/* .logo-logo {
 		height: 80px;
 		padding-top: 10px;
 		top: 15%;
-	}
+	} */
 
 	.navigation-bar {
 		background-color: rgba(0, 0, 0, 0.5);
@@ -8731,10 +8719,7 @@ ol {
 		background: linear-gradient(to right, #00A651, #8DC63F);
 	}
 
-	.contact-area {
-		background-size: 0%;
-		height: 1660px;
-	}
+
 
 	.icon-contact2 {
 		margin-right: 200px;
@@ -8760,9 +8745,9 @@ ol {
 		margin-bottom: 10px;
 	}
 
-	.nav .nav-title {
+	/* .nav .nav-title {
 		color: black;
-	}
+	} */
 }
 
 	@media (min-width: 1900px) {
@@ -8773,68 +8758,24 @@ ol {
 		.tempo{
 			display: none;
 		}
+
+		.footer-content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+		  }
 	}
 
 
 
 /*  */
-
+/* 
 	.navbar-collapse:not(.show) .hidden-on-main {
         display: none;
-    }
+    } */
 
-	footer {
-		background-color: rgb(255, 255, 255);
-		padding: 20px;
-		text-align: center;
-		border-top: 2px solid #fff;
-	  }
-	  
-	  .container-footer {
-		max-width: 960px;
-		margin: 0 auto;
-	  }
-	  
-	  .container-footer p {
-		margin: 5px 0;
-	  }
-	  
-	  .container-footer a {
-		color: #555;
-		text-decoration: none;
-	  }
-	  
-	  /* .logo-container {
-		margin-bottom: 20px;
-	  }
-	   */
-	  .logo-container img {
-		max-width: 250px;
-	  }
-	  
-	  .footer-content {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
-	  }
-	  
-	  .company-info p {
-		margin-bottom: 5px;
-	  }
-	  
-	  .social-media a {
-		display: inline-block;
-		margin-right: 10px;
-		color: #555;
-		font-size: 18px;
-	  }
-	  
-	  .footer-bottom-bot {
-		margin-top: 20px;
-	  }
-	  
-
+	
 	/* .navigation-bar {
 		background-color: rgba(0, 0, 0, 0.5);
 		height: 100px;
