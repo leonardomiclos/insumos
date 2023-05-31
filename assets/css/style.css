@@ -5612,6 +5612,7 @@ footer {
 
 
 .paragraph {
+	width: 375px;
 	font-weight: bolder;
 	color: #000000;
 }
@@ -5754,6 +5755,14 @@ body::-webkit-scrollbar-thumb {
 	position: relative;
 	overflow: hidden;
 } 
+
+.grid-item .paragraph{
+	width: 375px;
+}
+
+.grid-item p {
+	width: 375px;
+}
 
 .grid-item2{
 	width: 320px;
