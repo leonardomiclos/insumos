@@ -705,7 +705,12 @@
 })(jQuery); // End jQuery
 
 function scrollToDiv() {
-	var div = document.getElementById("contact");
+	var div = document.getElementById("contact-area");
+	div.scrollIntoView({ behavior: "smooth" });
+}
+
+function scrollToDivWork() {
+	var div = document.getElementById("workWithUs");
 	div.scrollIntoView({ behavior: "smooth" });
 }
 
@@ -877,6 +882,11 @@ function exibirErro(error) {
 
 	fjs.parentNode.insertBefore(js, fjs);
 })(document, 'script', 'tomorrow-sdk');
+
+
+$(function () {
+    $('[data-toggle="popover"]').popover();
+});
 
 
   
