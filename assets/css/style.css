@@ -5980,7 +5980,7 @@ ol {
 	margin-top: 100px;
 	margin-bottom: 100px;
 	width: 80%;
-	height: 400px;
+	height: 500px;
 }
 
 
@@ -6637,8 +6637,8 @@ footer {
 	  }
 
 	  .email-button {
-		display: inline-block;
 		background-color: #fdfdfd;
+		display: inline-block;
 		color: #FD7D07;
 		text-decoration: none;
 		padding: 10px 80px;
@@ -6775,6 +6775,13 @@ footer {
 	  
 	  .icon{
 		border-radius: 50%;
+	  }
+
+	  .floating-whatsapp {
+		position: fixed;
+		bottom: 20px; /* Distância em relação à parte inferior */
+		right: 20px; /* Distância em relação à parte direita */
+		z-index: 9999; /* Certifique-se de que o ícone esteja acima de outros elementos */
 	  }
 	  
 	  
